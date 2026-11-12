@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Lista Arquivos
-        run: ls ${{ github.workflow }}
+        run: ls "${{ github.workflow }}"
       - name: Status
         run: echo "${{ job.status }}"
       
