@@ -1,5 +1,5 @@
 
-name: Atividade 2q
+name: Atividade 2
 on:
   push:
 jobs:
@@ -13,5 +13,5 @@ jobs:
         run: echo ${{ github.repository }} && echo ${{ github.actor }}
       - name: Verifica README.md
         run: find README.md
-      - run: "Validação concluída com sucesso"
+      - run: echo "Validação concluída com sucesso"
       
