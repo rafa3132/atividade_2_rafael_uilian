@@ -1,0 +1,17 @@
+
+name: Atividade 2q
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Iniciando Workflow"
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Repositorio e Usuario
+        run: echo ${{ github.repository }} && echo ${{ github.actor }}
+      - name: Verifica README.md
+        run: find README.md
+      - run: "Validação concluída com sucesso"
+      
