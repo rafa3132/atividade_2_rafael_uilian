@@ -6,9 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - run: echo "Iniciando Workflow"
+      - name: Checkout
+        uses: actions/checkout@v5
       - name: Lista Arquivos
-        run: ls -la
+        run: ls ${{ github.workflow }}
       - name: Status
-        run: echo "Status ${{job.status}}"
+        run: echo "${{ job.status }}"
       
